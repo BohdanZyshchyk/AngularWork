@@ -5,6 +5,8 @@
     <h5 class="card-title">{{currentEvent.name}}</h5>
     <i *ngIf="isPriority == true" (click)="setPriority()" class="fas fa-2x fa-check-square"></i>
     <i *ngIf="isPriority == false" (click)="setPriority()" class="far fa-2x fa-check-square"></i>
+    <i *ngIf="isVisible == true" (click)="setVisibility()" class="fas fa-2x fa-eye"></i>
+    <i *ngIf="isVisible == false" (click)="setVisibility()" class="far fa-2x fa-eye-slash"></i>
     <p class="card-text">{{currentEvent.description}}</p>
     <p class="card-text">{{currentEvent.dateStarted}}</p>
     <div>

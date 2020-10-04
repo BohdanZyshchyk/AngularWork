@@ -13,6 +13,7 @@ import { TasksComponent } from './tasks/tasks.component';
 import { AddTaskComponent } from './tasks/add-task/add-task.component';
 import { TaskListComponent } from './tasks/task-list/task-list.component';
 import { TaskItemComponent } from './tasks/task-list/task-item/task-item.component';
+import { ExpanderComponent } from './events/expander/expander.component';
 
 @NgModule({
   declarations: [
@@ -26,11 +27,12 @@ import { TaskItemComponent } from './tasks/task-list/task-item/task-item.compone
     TasksComponent,
     AddTaskComponent,
     TaskListComponent,
-    TaskItemComponent
+    TaskItemComponent,
+    ExpanderComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

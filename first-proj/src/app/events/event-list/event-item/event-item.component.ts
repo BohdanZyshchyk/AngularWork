@@ -18,9 +18,15 @@ export class EventItemComponent implements OnInit {
   @Input() currentEvent : Event;
   @Input() index: number; 
   isPriority: boolean = false;
+  isVisible: boolean = false;
   
   setPriority(){
     this.isPriority = !this.isPriority;
+  }
+
+  setVisibility(){
+    this.isVisible = !this.isVisible;
+    this.currentEvent.visible = !this.currentEvent.visible
   }
 
   constructor() { }
