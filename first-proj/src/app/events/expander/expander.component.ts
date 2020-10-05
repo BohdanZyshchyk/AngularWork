@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import {Event} from "../event.model";
 
 @Component({
   selector: 'app-expander',
@@ -7,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ExpanderComponent implements OnInit {
   panelOpenState = false;
+  @Input() isHidden: boolean;
+
   constructor() { }
   ngOnInit(): void {
   }

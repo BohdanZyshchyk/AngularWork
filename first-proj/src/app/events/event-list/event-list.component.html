@@ -11,6 +11,10 @@
 </div> -->
 
 <div class="row">
-    <app-event-item class="col-6" *ngFor="let item of events; let i = index"
-     [currentEvent]="item" [index]="i"></app-event-item>
+  <ng-container *ngFor="let item of events; let i = index" >
+    <app-event-item class="col-6"
+     *ngIf="item.visible===isHidden"
+     [currentEvent]="item" 
+     [index]="i"></app-event-item>
+  </ng-container>
 </div>

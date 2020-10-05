@@ -4,10 +4,12 @@
             <h3>HiddenList</h3>
         </div>
         <div class="col-2">
-            <i class="fas fa-2x fa-sort-up"></i>
+            <i class="fas fa-2x fa-sort-up"  *ngIf="panelOpenState"></i>
+            <i class="fas fa-2x fa-sort-down"  *ngIf="panelOpenState===false"></i>
         </div>
     </div>
+    <p>{{isHidden}}</p>
 </div>
 <div class="container-fluid" *ngIf="panelOpenState">
-    <app-event-list class="col-9" [isHidden]="true"></app-event-list>
+    <app-event-list class="col-9" [isHidden]="false"></app-event-list>
 </div>
