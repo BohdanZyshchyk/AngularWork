@@ -14,6 +14,7 @@ import { AddTaskComponent } from './tasks/add-task/add-task.component';
 import { TaskListComponent } from './tasks/task-list/task-list.component';
 import { TaskItemComponent } from './tasks/task-list/task-item/task-item.component';
 import { ExpanderComponent } from './events/expander/expander.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { ExpanderComponent } from './events/expander/expander.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,19 +1,19 @@
-<form>
+<form #addForm="ngForm" (ngSubmit)="sendNewEvent(); addForm.reset()">
   <div class="form-group">
     <label for="exampleInputEmail1">Event Name</label>
-    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter name">
+    <input [(ngModel)]="name" type="text" class="form-control" id="eventName" name="eventName" aria-describedby="emailHelp" placeholder="Enter name">
   </div>
   <div class="form-group">
     <label for="exampleInputPassword1">Description</label>
-    <input type="text" class="form-control" placeholder="Description">
+    <input [(ngModel)]="description" type="text" class="form-control" id="eventDescr" name="eventDescr" placeholder="Description">
   </div>
   <div class="form-group">
     <label for="exampleInputPassword1">Image url</label>
-    <input type="url" class="form-control" placeholder="Image url">
+    <input [(ngModel)]="iamge_url" type="url" class="form-control" id="eventImage" name="eventImage" placeholder="Image url">
   </div>
   <div class="form-group">
     <label for="exampleInputPassword1">Date</label>
-    <input type="date" class="form-control" placeholder="Date started">
+    <input [(ngModel)]="dateStarted" type="date" class="form-control" id="eventDate" name="eventDate"  placeholder="Date started">
   </div>
   <button type="submit" class="btn btn-primary">Submit</button>
 </form>

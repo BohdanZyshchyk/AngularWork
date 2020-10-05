@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import {Event} from "../../event.model";
+import { EventService } from '../../event.service';
 
 
 @Component({
@@ -29,7 +30,11 @@ export class EventItemComponent implements OnInit {
     this.currentEvent.visible = !this.currentEvent.visible
   }
 
-  constructor() { }
+  sendForEdit(){
+    this.eventService.getEventEdit.emit(this.currentEvent);
+  }
+
+  constructor(private eventService: EventService) { }
 
   ngOnInit() {
   }

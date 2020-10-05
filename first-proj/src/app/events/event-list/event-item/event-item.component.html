@@ -7,6 +7,7 @@
     <i *ngIf="isPriority == false" (click)="setPriority()" class="far fa-2x fa-check-square"></i>
     <i *ngIf="isVisible == true" (click)="setVisibility()" class="fas fa-2x fa-eye"></i>
     <i *ngIf="isVisible == false" (click)="setVisibility()" class="far fa-2x fa-eye-slash"></i>
+    <i class="fas fa-2x fa-edit" (click)="sendForEdit()" ></i>
     <p class="card-text">{{currentEvent.description}}</p>
     <p class="card-text">{{currentEvent.dateStarted}}</p>
     <div>
