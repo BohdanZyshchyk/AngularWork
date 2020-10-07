@@ -1,0 +1,6 @@
+<app-add-task></app-add-task>
+<div class="row">
+      <app-task-item *ngFor="let item of taskList; let i = index" class="col-6"
+       [currentTask]="item" 
+       [index]="i"></app-task-item>
+  </div>

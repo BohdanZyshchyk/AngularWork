@@ -1,0 +1,11 @@
+<div class="card">
+    <img class="card-img-top" height="250px" [src]="currentEvent.iamge_url" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">{{currentEvent.name}}</h5>
+      <p class="card-text">{{currentEvent.description}}</p>
+      <p class="card-text">{{currentEvent.dateStarted}}</p>
+      <div>
+        <app-task-list></app-task-list>
+      </div>
+    </div>
+  </div>

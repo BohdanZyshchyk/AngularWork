@@ -1,0 +1,38 @@
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+    Add task
+  </button>
+  <!-- Modal -->
+  <div  class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Add Task</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <form #addForm="ngForm" (ngSubmit)="sendNewTask(); addForm.reset()">
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Task Theme</label>
+                  <input [(ngModel)]="theme" type="text" class="form-control" id="taskName" name="taskName" aria-describedby="emailHelp" placeholder="Enter theme">
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputPassword1">Task text</label>
+                  <input [(ngModel)]="text_work" type="text" class="form-control" id="taskText" name="taskText" placeholder="Task text">
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputPassword1">Image url</label>
+                  <input [(ngModel)]="iamge_url" type="url" class="form-control" id="taskImage" name="taskImage" placeholder="Image url">
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputPassword1">Date</label>
+                  <input [(ngModel)]="date" type="date" class="form-control" id="taskDate" name="taskDate"  placeholder="Date">
+                </div>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="submit" class="btn btn-primary">Save changes</button>
+              </form>
+      </div>
+    </div>
+  </div>

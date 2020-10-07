@@ -1,0 +1,13 @@
+    <div class="card bg-dark text-white">
+        <img  [src]="currentTask.iamge_url"  height="200px" width="50px" class="card-img" alt="Card image cap">
+        <div class="card-img-overlay">
+          <h5 class="card-title">{{currentTask.theme}}</h5>
+          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          <p class="card-text">{{currentTask.date}}</p>
+          <i class="fas fa-2x fa-circle " [ngClass]="{
+            'blue' : currentTask.isDone === false && currentTask.mark < 0,
+            'yellow' : currentTask.isDone === true,
+            'green' : currentTask.isDone === true && currentTask.mark > 0
+        }"></i>
+        </div>
+      </div>

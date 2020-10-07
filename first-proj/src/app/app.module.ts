@@ -15,6 +15,15 @@ import { TaskListComponent } from './tasks/task-list/task-list.component';
 import { TaskItemComponent } from './tasks/task-list/task-item/task-item.component';
 import { ExpanderComponent } from './events/expander/expander.component';
 import { FormsModule } from '@angular/forms';
+import { HomeappComponent } from './homeapp/homeapp.component';
+import { Page404Component } from './page404/page404.component';
+import { InfoAppComponent } from './about/info-app/info-app.component';
+import { ContactAppComponent } from './about/contact-app/contact-app.component';
+import { AboutComponent } from './about/about.component';
+import { TestComponent } from './test/test.component';
+import { ShowEventsComponent } from './show-router/show-events/show-events.component';
+import { DetailComponent } from './events/detail/detail.component';
+import { ShowRouterComponent } from './show-router/show-router.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +38,16 @@ import { FormsModule } from '@angular/forms';
     AddTaskComponent,
     TaskListComponent,
     TaskItemComponent,
-    ExpanderComponent
+    ExpanderComponent,
+    HomeappComponent,
+    Page404Component,
+    InfoAppComponent,
+    ContactAppComponent,
+    AboutComponent,
+    TestComponent,
+    ShowEventsComponent,
+    DetailComponent,
+    ShowRouterComponent
   ],
   imports: [
     BrowserModule,

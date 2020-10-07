@@ -1,5 +1,5 @@
 
-<div class="card">
+<div class="card" [routerLink]="['/showevents' + '/' + currentEvent.id]">
   <img class="card-img-top" height="250px" [src]="currentEvent.iamge_url" alt="Card image cap">
   <div class="card-body">
     <h5 class="card-title">{{currentEvent.name}}</h5>
