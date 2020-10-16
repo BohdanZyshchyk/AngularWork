@@ -10,12 +10,15 @@ import { EventService } from '../event.service';
 export class EventListComponent implements OnInit {
   @Input() isHidden: boolean; 
   @Input() events: Event [];
+  page:number = 1;
+  total:number;
   constructor(private eventsService: EventService) { }
 
   ngOnInit() {
     this.events = this.eventsService.getAllEvents();
     this.eventsService.refreshList.subscribe((events: Event []) =>{
       this.events = events;
+      this.total = events.length;
     })
   }
   

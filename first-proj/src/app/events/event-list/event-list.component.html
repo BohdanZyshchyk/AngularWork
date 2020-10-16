@@ -9,12 +9,16 @@
     <app-event-item></app-event-item>
   </div>
 </div> -->
+<div class="container">
 
-<div class="row">
-  <ng-container *ngFor="let item of events; let i = index" >
-    <app-event-item class="col-6"
-     *ngIf="item.visible===isHidden"
-     [currentEvent]="item" 
-     [index]="i"></app-event-item>
-  </ng-container>
+  <div class="row">
+    <ng-container
+      *ngFor="let item of events  | paginate: { id:'listing_paginations', itemsPerPage: 2, currentPage: page, totalItems:total}; let i = index">
+      <app-event-item class="col-6" *ngIf="item.visible===isHidden" [currentEvent]="item" [index]="i"></app-event-item>
+    </ng-container>
+  </div>
+  <div class="container text-center">
+    <pagination-controls id="listing_paginations" maxSize="5" directionLinks="true" (pageChange)="page = $event">
+    </pagination-controls>
+  </div>
 </div>

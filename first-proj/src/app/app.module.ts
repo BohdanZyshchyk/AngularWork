@@ -24,6 +24,7 @@ import { TestComponent } from './test/test.component';
 import { ShowEventsComponent } from './show-router/show-events/show-events.component';
 import { DetailComponent } from './events/detail/detail.component';
 import { ShowRouterComponent } from './show-router/show-router.component';
+import {NgxPaginationModule} from 'ngx-pagination'; 
 
 @NgModule({
   declarations: [
@@ -52,7 +53,8 @@ import { ShowRouterComponent } from './show-router/show-router.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    NgxPaginationModule
   ],
   providers: [],
   bootstrap: [AppComponent]
